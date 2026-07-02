@@ -1,0 +1,6 @@
+{
+  "name": "Sentiment Analysis Dashboard",
+  "description": "A desktop web UI for analyzing and categorizing social media comments into positive, negative, and neutral emotions, including a batch processing tool.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
