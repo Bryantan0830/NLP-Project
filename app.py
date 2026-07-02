@@ -8,6 +8,13 @@ if __name__ == '__main__':
     print("🚀 Flask Server started. Waiting for Web Frontend requests...")
     print("========================================")
 
-    # 动态获取 Render 提供的端口，如果在本地运行，默认使用 5000
+    @app.route('/api/chat', methods = ['post'])
+    def predict():
+        return
+
     port = int(os.environ.get("PORT", 5000))
     app.run(host="[IP_ADDRESS]", port=port)
+
+# alternator app.run??
+
+
