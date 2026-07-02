@@ -3,6 +3,10 @@ import os
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "Flask server is running!"
+
 @app.route('/api/chat', methods=['POST'])
 def predict():
     data = request.json
