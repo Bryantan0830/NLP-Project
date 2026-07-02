@@ -1,5 +1,4 @@
 import os
-import uvicorn
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -13,4 +12,4 @@ if __name__ == '__main__':
 
     # 动态获取 Render 提供的端口，如果在本地运行，默认使用 5000
     port = int(os.environ.get("PORT", 5000))
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    app.run(app, host="0.0.0.0", port=port)
