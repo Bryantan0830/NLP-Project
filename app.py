@@ -1,12 +1,13 @@
-from Flask import request
+from flask import Flask, request
 import os
-from flask import Flask
+
 app = Flask(__name__)
 
-@app.route('/api/chat', methods = ['post'])
+@app.route('/api/chat', methods=['POST'])
 def predict():
     data = request.json
     user_input = data.get('input')
+
     if user_input:
         return {"response": user_input}
     else:
@@ -18,8 +19,4 @@ if __name__ == '__main__':
     print("========================================")
 
     port = int(os.environ.get("PORT", 5000))
-    app.run(host="[IP_ADDRESS]", port=port)
-
-# alternator app.run??
-
-
+    app.run(host="0.0.0.0", port=port)
