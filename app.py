@@ -1,10 +1,7 @@
 import os
-import uvicorn
-from fastapi import FastAPI
+from flask import Flask
+app = Flask(__name__)
 
-app = FastAPI()
-
-# ... (你的 API 路由代码，比如 @app.post("/predict") 等) ...
 
 if __name__ == '__main__':
     print("========================================")
