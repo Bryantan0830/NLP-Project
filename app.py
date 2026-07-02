@@ -3,12 +3,12 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return "Flask server is running!"
-
-@app.route('/api/chat', methods=['POST'])
+@app.route('/api/chat', methods=['GET', 'POST'])
 def predict():
+
+    if request.method == 'GET':
+        return {"status": "API is working"}
+
     data = request.json
     user_input = data.get('input')
 
